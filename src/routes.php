@@ -13,6 +13,10 @@ return [
     '' => ['HomeController', 'index',],
     'survivants' => ['SurvivantController', 'index',],
     'admin' => ['AdminController', 'index'],
+    'admin/amerique' => ['AdminAmeriqueController', 'index',],
+    'amerique/add' => ['AdminAmeriqueController', 'add'],
+    'amerique/edit' => ['AdminAmeriqueController', 'edit', ['id']],
+    'amerique/delete' => ['AdminAmeriqueController', 'delete', ['id']],
     'login' => ['AdminController', 'login'],
     'logout' => ['AdminController', 'logout'],
     'items' => ['ItemController', 'index',],
@@ -21,6 +25,7 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
     'amerique' => ['AmeriqueController', 'index'],
+    'amerique/index' => ['AdminAmeriqueController','index',],
     'europe' => ['EuropeController', 'index'],
     'asie' => ['AsieController', 'index']
 ];

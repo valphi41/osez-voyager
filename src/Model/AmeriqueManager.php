@@ -15,7 +15,7 @@ class AmeriqueManager extends AbstractManager
 
     public function insert(array $amerique): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`title`,`country`,`content`,`danger`)
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (title, country, content , danger )
     VALUES (:title, :country, :content, :danger)");
         $statement->bindValue('title', $amerique['title'], PDO::PARAM_STR);
         $statement->bindValue('country', $amerique['country'], PDO::PARAM_STR);
@@ -24,5 +24,17 @@ class AmeriqueManager extends AbstractManager
 
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
+    }
+    public function update(array $amerique): bool
+    {
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE .
+        " SET `title` = :title, `country` = :country, `content` = :content, `danger` = :danger WHERE id=:id");
+        $statement->bindValue('id', $amerique['id'], PDO::PARAM_INT);
+        $statement->bindValue('title', $amerique['title'], PDO::PARAM_STR);
+        $statement->bindValue('country', $amerique['country'], PDO::PARAM_STR);
+        $statement->bindValue('content', $amerique['content'], PDO::PARAM_STR);
+        $statement->bindValue('danger', $amerique['danger'], PDO::PARAM_INT);
+
+        return $statement->execute();
     }
 }
