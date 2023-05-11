@@ -1,6 +1,6 @@
 .home-title {
     text-align: center;
-    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 .line-advice {
@@ -13,7 +13,7 @@
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 .home-presentation span {
     font-weight: bold;
