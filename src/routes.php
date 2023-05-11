@@ -20,5 +20,7 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-    'amerique' => ['AmeriqueController', 'index']
+    'amerique' => ['AmeriqueController', 'index'],
+    'europe' => ['EuropeController', 'index'],
+    'asie' => ['AsieController', 'index']
 ];
