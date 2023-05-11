@@ -77,7 +77,7 @@ INSERT INTO `item` (`id`, `title`) VALUES
 -- Contenu de la table `amérique`
 --
 INSERT INTO `amerique` (`title`,`country`, `content`, `danger`) VALUES
-('La vallée de la mort','Etats-Unis','Elle a été appelée Death Valley par des prospecteurs et d\'autres qui cherchaient à traverser la vallée,
+('La vallée de la mort','Etats-Unis','Elle a été appelée Death Valley par des prospecteurs et d’autres qui cherchaient à traverser la vallée,
  sur leur chemin vers les champs aurifères. Piégés pendant plusieurs mois dans une vallée sèche et presque dépourvue de toute vie animale ou végétale,
   ils lui donnèrent le nom de Death Valley : La vallée de la Mort.', 9 ),
   ('Ile de Queimada Grande', 'Brésil', 'Il faudra avoir les nerfs solides  pour pénétrer ce lieu effrayant et très inhospitalier ! Bienvenus, ou pas, sur l’Île de Queimada Grande…
@@ -92,15 +92,15 @@ INSERT INTO `amerique` (`title`,`country`, `content`, `danger`) VALUES
 --
 INSERT INTO `asie` (`title`,`country`, `content`, `danger`) VALUES
 ('Forêt Aokigahara','Japon','
-La forêt d\'Aokigahara, située au pied du Mont Fuji au Japon, est connue pour être l\'un des endroits les plus effrayants au monde.
+La forêt d’Aokigahara, située au pied du Mont Fuji au Japon, est connue pour être l’un des endroits les plus effrayants au monde.
  Aussi appelée la "Forêt des Suicides", elle est tristement célèbre pour être le lieu de nombreux suicides chaque année.
   Les arbres denses et les formations rocheuses cachent des corps en décomposition et des ossements blanchis,
    créant une atmosphère macabre et sinistre. Les visiteurs qui se sont aventurés dans cette forêt ont signalé des sensations étranges,
     des voix et des apparitions de fantômes, ce qui a renforcé sa réputation de lieu hanté.', 5 ),
-('North Sentinel Island', 'Inde', 'North Sentinel Island est une petite île située dans l\'océan Indien. Les habitants de l\'île sont connus pour être l\'un des peuples les plus isolés du monde.
-En raison de leur isolement, peu de choses sont connues sur leur mode de vie et leurs croyances, mais il est dit qu\'ils pratiquent une forme de cannibalisme
+('North Sentinel Island', 'Inde', 'North Sentinel Island est une petite île située dans l’océan Indien. Les habitants de l’île sont connus pour être l’un des peuples les plus isolés du monde.
+En raison de leur isolement, peu de choses sont connues sur leur mode de vie et leurs croyances, mais il est dit qu’ils pratiquent une forme de cannibalisme
  et qu\'ils ne sont pas immunisés contre les maladies courantes, ce qui signifie que toute interaction avec eux pourrait être mortelle pour eux.
-North Sentinel Island est considérée comme l\'un des endroits les plus effrayants et dangereux de la planète, et de nombreuses personnes considèrent
+North Sentinel Island est considérée comme l’un des endroits les plus effrayants et dangereux de la planète, et de nombreuses personnes considèrent
  qu\'il est préférable de la laisser tranquille, afin de ne pas déclencher de nouvelles violences.', 10);
 
 --
@@ -109,7 +109,7 @@ North Sentinel Island est considérée comme l\'un des endroits les plus effraya
 INSERT INTO `europe` (`title`,`country`, `content`, `danger`) VALUES
 ('Pripyat','Ukraine','Prypiat est une ville fantôme située en Ukraine, à quelques kilomètres de la centrale nucléaire de Tchernobyl.
  La ville était autrefois le foyer de milliers de personnes, mais a été évacuée en 1986 après l\'explosion de la centrale nucléaire.
-  Aujourd\'hui, la ville est laissée à l\'abandon et est devenue un lieu de pèlerinage pour les amateurs d\'urbex et les touristes intrépides.
+  Aujourd\'hui, la ville est laissée à l’abandon et est devenue un lieu de pèlerinage pour les amateurs d’urbex et les touristes intrépides.
   En se promenant dans les rues silencieuses de Prypiat, on peut sentir une présence oppressante et étouffante. La ville est devenue un véritable labyrinthe,
    avec des bâtiments abandonnés et des routes en ruine. Les nombreux signes de danger radioactif rappellent que la ville est un endroit extrêmement dangereux pour la vie humaine.', 10 ),
    ('Iakoustk', 'Russie', 'Voici maintenant la ville la plus froide du monde. Autant vous dire qu’on ne va pas là-bas pour un voyage de noces ou des vacances reposantes.

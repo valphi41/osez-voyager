@@ -1,12 +1,12 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-    --primary: #1D334A;
-    --primary-inverse: #BABA9C;
+    --primary: #FF7700;
+    --primary-inverse: #FE9000;
     --card-clear-color: #D9D9D9;
     --card-dark-color: #0E1C26;
     --card-dark-title-color: #C9C081;
     --color: black;
-    --background-color: #Efefef;
+    --background-color: #ffff;
 }
 
 :root {
