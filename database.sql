@@ -85,7 +85,8 @@ INSERT INTO `amerique` (`title`,`country`, `content`, `danger`) VALUES
      Mais pas d’inoffensives couleuvres, non, non ! Elle est infestée de Jararaca-ilhoa : LA vipère la plus venimeuse du monde.
       Une morsure et une heure plus tard, vous n’êtes plus de ce monde. Le venin de ces serpents est carrément capable de dissoudre la chair humaine.
        En plus, avec une densité d’un serpent tous les mètres carrés, ne comptez pas passer au travers d’un tête à tête avec un Jararaca-ilhoa.
-        Du coup, soyons clairs, à moins d’être un biologiste ou scientifique de renommée mondiale, on ne vous laissera jamais mettre un orteil sur cette île.', 7);
+        Du coup, soyons clairs, à moins d’être un biologiste ou scientifique de renommée mondiale, on ne vous laissera jamais mettre un orteil sur cette île.',
+         8 );
 
 --
 -- Contenu de la table `asie`
