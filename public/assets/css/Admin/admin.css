@@ -12,6 +12,13 @@
     --font-size: 100%;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .navbar {
     margin: 1rem;
     display: flex;
@@ -51,13 +58,6 @@ span {
 
 span>a {
     color: var(--primary-inverse);
-}
-
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 .info>span {
