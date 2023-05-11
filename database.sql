@@ -64,7 +64,17 @@ CREATE TABLE `europe` (
   `danger` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+
+INSERT INTO `user` (`id`, `email`, `password`) VALUES
+(1, 'admin@admin.com', '$2y$10$aHYhtkBtopx0zPoFD8zu2.pw1nZE9tjV6InEJoM.NsKt4GgiIwWCK');
 --
 -- Contenu de la table `item`
 --
