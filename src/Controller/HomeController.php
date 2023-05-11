@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\TravelMapManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -9,6 +11,10 @@ class HomeController extends AbstractController
      */
     public function index(): string
     {
-        return $this->twig->render('Home/index.html.twig');
+        $travelMapManager = new TravelMapManager();
+        $country = $travelMapManager->getAll();
+
+
+        return $this->twig->render('Home/index.html.twig', ['country' => $country]);
     }
 }
