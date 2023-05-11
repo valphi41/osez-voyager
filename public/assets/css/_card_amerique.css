@@ -8,18 +8,31 @@ section.ameriques-container {
     display: grid;
     gap: calc(var(--spacing) * 5);
     grid-template-columns: 1fr;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 section.ameriques-container>article {
     padding: 1rem;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centrer les éléments horizontalement */
+    margin: .5rem 0;
     min-width: 0;
-    height: 100%;
+    height: 95vh;
     background-size: cover;
     background-position: center;
+    border-radius: 1rem;
+    text-align: center;
+    /* Centrer le texte dans l'article */
+}
+
+section.ameriques-container>article>h2 {
+    background-color: rgba(128, 128, 128, 0.7);
+    display: inline;
+    padding: .2rem;
+    margin-bottom: auto;
+    /* Pousser le reste du contenu vers le bas */
     border-radius: 1rem;
 }
 
@@ -29,12 +42,17 @@ section.ameriques-container>article h3 {
     text-align: center;
 }
 
+
 .text-content p {
     color: #fff;
 }
 
 section.ameriques-container>article a {
     margin-top: auto;
+}
+
+section.ameriques-container>article>h2 {
+    margin-bottom: auto;
 }
 
 .content-container {
@@ -48,31 +66,9 @@ section.ameriques-container>article a {
     gap: var(--spacing);
     padding: var(--spacing);
     overflow-y: auto;
-    max-height: 25rem;
+    max-height: 18rem;
     background-color: rgba(128, 128, 128, 0.7);
     border-radius: 1rem;
-}
-
-.text-content::-webkit-scrollbar {
-    width: 10px;
-    /* Adjust width of scrollbar here */
-}
-
-.text-content::-webkit-scrollbar-track {
-    background: #888;
-    border-radius: 1rem;
-    /* Change track color here */
-}
-
-.text-content::-webkit-scrollbar-thumb {
-    background: #f1f1f1;
-    border-radius: 1rem;
-    /* Change thumb color here */
-}
-
-.text-content::-webkit-scrollbar-thumb:hover {
-    background: #dadada;
-    /* Change color when hovering over thumb */
 }
 
 @media screen and (max-width: 767px) {
@@ -80,21 +76,28 @@ section.ameriques-container>article a {
         grid-template-columns: 1fr;
     }
 
-    section.ameriques-container>article>h2,
-    section.ameriques-container>article h3 {
-        font-size: 1.2em;
-        padding: 0.5em;
+    section.ameriques-container>article>h2 {
+        padding: 0.1rem;
+
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     section.ameriques-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    section.ameriques-container>article>h2 {
+        padding: 0.1rem;
     }
 }
 
 @media screen and (min-width: 1024px) {
     section.ameriques-container {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    section.ameriques-container>article>h2 {
+        padding: .1rem;
     }
 }
