@@ -98,11 +98,11 @@ INSERT INTO `item` (`id`, `title`) VALUES
 INSERT INTO `amerique` (`title`,`country`, `content`, `danger`) VALUES
 ('La vallée de la mort','Etats-Unis','Elle a été appelée Death Valley par des prospecteurs et d’autres qui cherchaient à traverser la vallée,
  sur leur chemin vers les champs aurifères. Piégés pendant plusieurs mois dans une vallée sèche et presque dépourvue de toute vie animale ou végétale,
-  ils lui donnèrent le nom de Death Valley : La vallée de la Mort.', 9 ),
+  ils lui donnèrent le nom de Death Valley : La vallée de la Mort.', 90 ),
   ('Ile de Queimada Grande', 'Brésil', 'L’Île de Queimada Grande, au large des côtes brésiliennes, est l’un des endroits les plus dangereux au monde,
    infestée de Jararaca-ilhoa, la vipère la plus venimeuse. Le venin de ces serpents dissout la chair humaine. Avec une densité d’un serpent par mètre carré,
    il est impossible d’éviter un face-à-face avec ces serpents mortels.
-   À moins d’être un biologiste renommé, fouler cette île est strictement interdit.', 8);
+   À moins d’être un biologiste renommé, fouler cette île est strictement interdit.', 80);
 --
 -- Contenu de la table `asie`
 --
@@ -112,12 +112,12 @@ La forêt d’Aokigahara, située au pied du Mont Fuji au Japon, est connue pour
  Aussi appelée la "Forêt des Suicides", elle est tristement célèbre pour être le lieu de nombreux suicides chaque année.
   Les arbres denses et les formations rocheuses cachent des corps en décomposition et des ossements blanchis,
    créant une atmosphère macabre et sinistre. Les visiteurs qui se sont aventurés dans cette forêt ont signalé des sensations étranges,
-    des voix et des apparitions de fantômes, ce qui a renforcé sa réputation de lieu hanté.', 5 ),
+    des voix et des apparitions de fantômes, ce qui a renforcé sa réputation de lieu hanté.', 50 ),
 ('North Sentinel Island', 'Inde', 'North Sentinel Island est une petite île située dans l’océan Indien. Les habitants de l’île sont connus pour être l’un des peuples les plus isolés du monde.
 En raison de leur isolement, peu de choses sont connues sur leur mode de vie et leurs croyances, mais il est dit qu’ils pratiquent une forme de cannibalisme
  et qu’ils ne sont pas immunisés contre les maladies courantes, ce qui signifie que toute interaction avec eux pourrait être mortelle pour eux.
 North Sentinel Island est considérée comme l’un des endroits les plus effrayants et dangereux de la planète, et de nombreuses personnes considèrent
- qu’il est préférable de la laisser tranquille, afin de ne pas déclencher de nouvelles violences.', 10);
+ qu’il est préférable de la laisser tranquille, afin de ne pas déclencher de nouvelles violences.', 100);
 
 --
 -- Contenu de la table `europe`
@@ -127,12 +127,12 @@ INSERT INTO `europe` (`title`,`country`, `content`, `danger`) VALUES
  La ville était autrefois le foyer de milliers de personnes, mais a été évacuée en 1986 après l\'explosion de la centrale nucléaire.
   Aujourd\'hui, la ville est laissée à l\'abandon et est devenue un lieu de pèlerinage pour les amateurs d\'urbex et les touristes intrépides.
   En se promenant dans les rues silencieuses de Prypiat, on peut sentir une présence oppressante et étouffante. La ville est devenue un véritable labyrinthe,
-   avec des bâtiments abandonnés et des routes en ruine. Les nombreux signes de danger radioactif rappellent que la ville est un endroit extrêmement dangereux pour la vie humaine.', 10 ),
+   avec des bâtiments abandonnés et des routes en ruine. Les nombreux signes de danger radioactif rappellent que la ville est un endroit extrêmement dangereux pour la vie humaine.', 100 ),
    ('Iakoustk', 'Russie', 'Voici maintenant la ville la plus froide du monde. Autant vous dire qu’on ne va pas là-bas pour un voyage de noces ou des vacances reposantes.
     Dès que vous mettez un pied en dehors de l’avion, vous êtes accueillis par un thermomètre à -50 degrés !
     En fait, il suffit d’imaginer tout un monde construit dans votre congélateur. Même pire ! L’air brûle, le froid entaille,
      les mâchoires s’immobilisent, le paysage entier est figé dans la glace, rien n’est enterré à cause d’un sol gelé jusqu’à deux cent-cinquante mètre de profondeur.
-      Néanmoins, si vous êtes un tantinet agoraphobe, en préparation pour l’Everest ou passionné·e de paysages vierges, nul doute que vous adorerez ce dernier des lieux dangereux.', 5);
+      Néanmoins, si vous êtes un tantinet agoraphobe, en préparation pour l’Everest ou passionné·e de paysages vierges, nul doute que vous adorerez ce dernier des lieux dangereux.', 50);
 
 INSERT INTO `survivants` (`name`,`content`, `image`) VALUES
 ('Anthony Gorski','Anthony, un touriste malchanceux, se retrouve en vacances à Londres lorsqu\'il est victime d\'un mauvais sort jeté par Voldemort lui-même !
