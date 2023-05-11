@@ -1,0 +1,23 @@
+nav, nav ul {
+    align-items: flex-end;
+}
+nav{
+    justify-content: center;
+}
+nav img{
+    width: 20rem;
+
+}
+
+.line-navbar {
+    border-top: 2px solid rgb(255, 255, 255);
+    width: 80%;
+    margin: auto;
+}
+
+[role=link]:is([aria-current],:hover,:active,:focus), a:is([aria-current],:hover,:active,:focus) {
+    color:white;
+}
+[role=link], a {
+    color: white;
+}
