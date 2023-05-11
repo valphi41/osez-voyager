@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+<div class="header">
+	{% include 'Include/_navbar.html.twig' %}
+    </div>
+    	<h1 class="survivant-title">Les survivants</h1>
+	<section class="survivant-container">
+		{% for survivant in survivants %}
+			<article>
+				<img src="assets/images/{{survivant.image}}" alt="Photo">
+				<div class="survivant-content">
+					<h2>{{ survivant.name }}</h2>
+					<p>
+						{{ survivant.content }}
+					</p>
+				</div>
+			</article>
+		{% endfor %}
+	</section>
+{% endblock %}

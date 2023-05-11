@@ -11,6 +11,7 @@ use App\Controller\AmeriqueController;
 
 return [
     '' => ['HomeController', 'index',],
+    'survivants' => ['SurvivantController', 'index',],
     'admin' => ['AdminController', 'index'],
     'login' => ['AdminController', 'login'],
     'logout' => ['AdminController', 'logout'],
