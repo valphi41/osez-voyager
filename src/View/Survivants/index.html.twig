@@ -1,9 +1,9 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
 <div class="header">
-		<img class="img-survivant" src="assets/images/survivant.jpg" alt="survivor">
-	<h1 class="survivant-title">Les survivants</h1>
+	{% include 'Include/_navbar.html.twig' %}
     </div>
+    	<h1 class="survivant-title">Les survivants</h1>
 	<section class="survivant-container">
 		{% for survivant in survivants %}
 			<article>
