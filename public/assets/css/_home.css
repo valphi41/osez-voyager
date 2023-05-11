@@ -1,0 +1,20 @@
+.home-title {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.line-advice {
+    border-top: 5px solid black;
+    width: 80%;
+    margin: auto;
+}
+
+.home-presentation {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+.home-presentation span {
+    font-weight: bold;
+}
