@@ -29,7 +29,14 @@
 							{{ asie.country }}</h3>
 						<p>{{ asie.content|raw }}</p>
 						<p>Danger :
-							{{ asie.danger }}</p>
+							{% if asie.danger <= 30 %}
+								<img src="/assets/images/low-danger.png" alt="Faible danger" style="width: 70px; height: 70px; border-radius: 0.5rem;">
+							{% elseif asie.danger <= 70 %}
+								<img src="/assets/Background/riskmedium.png" alt="Danger modéré" style="width: 100px; height: 70px; border-radius: 0.5rem;">
+							{% else %}
+								<img src="/assets/Background/dangermort.png" alt="Danger élevé" style="width: 70px; height: 70px; border-radius: 0.5rem;">
+							{% endif %}
+						</p>
 					</div>
 				</div>
 			</article>

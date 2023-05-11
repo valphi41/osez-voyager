@@ -29,7 +29,14 @@
 							{{ europe.country }}</h3>
 						<p>{{ europe.content|raw }}</p>
 						<p>Danger :
-							{{ europe.danger }}</p>
+							{% if europe.danger <= 30 %}
+								<img src="/assets/images/low-danger.png" alt="Faible danger" style="width: 70px; height: 70px;">
+							{% elseif europe.danger <= 70 %}
+								<img src="/assets/Background/riskmedium.png" alt="Danger modéré" style="width: 100px; height: 70px;">
+							{% else %}
+								<img src="/assets/Background/dangermort.png" alt="Danger élevé" style="width: 70px; height: 70px;">
+							{% endif %}
+						</p>
 					</div>
 				</div>
 			</article>
