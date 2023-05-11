@@ -1,0 +1,44 @@
+.footer {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    background-color: var(--primary);
+
+    color: var(--primary-inverse);
+
+    align-items: center;
+
+    margin-top: auto;
+
+    padding: 0.5rem;
+
+}
+
+.reseaux-sociaux>a>img {
+
+    max-height: 3rem;
+
+}
+
+.reseaux-sociaux {
+
+    transition: transform .1s;
+
+    margin-top: 0.5rem;
+
+
+
+
+}
+
+.reseaux-sociaux:hover {
+
+    -ms-transform: scale(1.3);
+
+    -webkit-transform: scale(1.3);
+
+    transform: scale(1.5);
+
+}
