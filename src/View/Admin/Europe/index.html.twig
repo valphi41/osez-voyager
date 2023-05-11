@@ -1,0 +1,38 @@
+{% extends 'Admin/layout.html.twig' %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin/product_css/_admin_product.css">
+{% endblock %}
+{% block content %}
+	<h1 class="product-list-title">Liste des lieux d'Europe</h1>
+	<a href="/europe/add" class="add-admin">Ajouter un nouveau lieu</a>
+	<table role="grid" class="europe-table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nom</th>
+				<th>Pays</th>
+				<th>Information</th>
+				<th>Danger</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for europe in europes %}
+				<tr>
+					<td class="europe-cell">{{asie.id}}</td>
+					<td class="europe-cell">
+						{{europe.title}}
+					</td>
+					<td class="europe-cell">{{europe.country}}</td>
+					<td class="europe-cell">{{europe.content}}</td>
+					<td class="europe-cell">{{europe.danger}}</td>
+					<td class="europe-cell">
+						<a href="/europe/edit?id={{europe.id}}">Modifier</a>
+					</td>
+					<td class="product-cell">
+						<a href="/europe/delete?id={{europe.id}}">Supprimer</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

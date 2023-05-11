@@ -1,0 +1,22 @@
+{% block content %}
+
+	<form method="post">
+		<input type="hidden" value="{{ europe.id }}" name="id">
+
+		<label for="title">Nom</label>
+		<input type="text" value="{{ europe.title }}" name="title" id="title">
+
+		<label for="country">Pays</label>
+		<input type="text" value="{{ europe.country }}" name="country" id="country">
+
+		<label for="content">Description</label>
+		<input type="text" value="{{ europe.content }}" name="content" id="content">
+
+        <label for="danger">Dangerosité</label>
+		<input type="number" value="{{ europe.danger }}" name="danger" id="danger">
+
+
+		<button>Valider</button>
+	</form>
+
+{% endblock %}
