@@ -1,18 +1,12 @@
+.header-amerique {
+    background-image: url("/assets/images/regard_vide.jpg");
+    min-height: 50vh;
+    background-size: cover;
+}
+
 .title-amerique {
     text-align: center;
     margin-top: 1rem;
-}
-
-.img-amerique {
-    display: flex;
-    justify-content: center;
-}
-
-.img-amerique img {
-    width: 100%;
-    height: 30rem;
-    object-fit: cover;
-    object-position: top;
 }
 
 h3>img {
