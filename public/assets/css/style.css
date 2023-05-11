@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap%27');
 
 
+@import '_card_amerique.css';
+@import 'page_amerique.css';
 @import '_navbar.css';
 @import '_home.css';
 @import '_variables.css';

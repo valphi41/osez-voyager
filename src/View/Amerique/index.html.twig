@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Osez Voyager
+{% endblock %}
+
+{% block meta_description %}
+	Voyages
+{% endblock %}
+
+{% block content %}
+	<figure class="img-amerique">
+		<img src="/assets/images/regard_vide.jpg" alt="Image d'un paysage d'Amerique">
+	</figure>
+	<h1 class="title-amerique">Les périls d’Amérique</h1>
+	{% set backgroundImages = [
+        '/assets/Background/mort.png',
+        '/assets/Background/ile.png',
+        '/path/to/image3.jpg',
+        '/path/to/image4.jpg'
+    ] %}
+	<section class="ameriques-container">
+		{% for amerique in ameriques %}
+			<article id="article-{{ loop.index }}" style="background-image: url('{{ backgroundImages[(loop.index - 1) % backgroundImages|length] }}')">
+				<h2>{{ amerique.title }}</h2>
+				<div class="content-container">
+					<div class="text-content">
+						<h3>Pays :
+							{{ amerique.country }}</h3>
+						<p>{{ amerique.content|raw }}</p>
+						<p>Danger :
+							{{ amerique.danger }}</p>
+					</div>
+				</div>
+			</article>
+		{% endfor %}
+	</section>
+{% endblock %}
