@@ -13,6 +13,8 @@ class TravelMapManager extends AbstractManager
             'GET',
             'https://restcountries.com/v3.1/all'
         );
-        return $response->toArray();
+        $countries = $response->toArray();
+        $countryNames = array_column($countries, 'name', 'cca3');
+        return $countryNames;
     }
 }

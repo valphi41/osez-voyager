@@ -12,9 +12,8 @@ class HomeController extends AbstractController
     public function index(): string
     {
         $travelMapManager = new TravelMapManager();
-        $country = $travelMapManager->getAll();
+        $countries = $travelMapManager->getAll();
 
-
-        return $this->twig->render('Home/index.html.twig', ['country' => $country]);
+        return $this->twig->render('Home/index.html.twig', ['countries' => $countries]);
     }
 }

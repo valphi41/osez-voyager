@@ -33,10 +33,23 @@
 <div class="button">
 	<a href="#" class="bouton-haut"><img src="/assets/images/up.png" alt=""></a>
 </div>
-{% set numero = random(0, 191) %}
+{# {% set numero = random(0, 191) %}
 {{ dump(country[numero].name.common) }}
-{{random [common] }}
-<button id="travel_rand">Envie de voyager ?</button>{% endblock %}{% block javascript %}
-<script>
-	src = "/assets/js/script.js"
+{{random [common] }} #}
+
+{# <h1>List of countries</h1>
+
+    <ul>
+        {% set numero = random(0, 191) %}
+        {% for country in countries %}
+            <li>{{ country[numero].name.common }}</li>
+        {% endfor %}
+    </ul> #}
+<h1>Random Country Generator</h1>
+    <button id="random-country-btn">Générer un pays aléatoire</button>
+    <div id="country-name"></div>
+
+{% endblock %}
+{% block javascript %}
+<script src="/assets/JS/script.js">
 </script>{% endblock %}
