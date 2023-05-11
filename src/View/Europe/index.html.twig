@@ -12,24 +12,24 @@
 		{% include 'Include/_navbar.html.twig' %}
 	</div>
 
-	<h1 class="title-amerique">Les périls d’Amérique</h1>
+	<h1 class="title-amerique"></h1>
 	{% set backgroundImages = [
-        '/assets/Background/Amerique/mort.png',
-        '/assets/Background/Amerique/ile.png',
+        '/assets/Background/Europe/Pripyat.png',
+        '/assets/Background/Europe/Yakustk.png',
         '/path/to/image3.jpg',
         '/path/to/image4.jpg'
     ] %}
 	<section class="ameriques-container">
-		{% for amerique in ameriques %}
+		{% for europe in europes %}
 			<article id="article-{{ loop.index }}" style="background-image: url('{{ backgroundImages[(loop.index - 1) % backgroundImages|length] }}')">
-				<h2>{{ amerique.title }}</h2>
+				<h2>{{ europe.title }}</h2>
 				<div class="content-container">
 					<div class="text-content">
 						<h3>Pays :
-							{{ amerique.country }}</h3>
-						<p>{{ amerique.content|raw }}</p>
+							{{ europe.country }}</h3>
+						<p>{{ europe.content|raw }}</p>
 						<p>Danger :
-							{{ amerique.danger }}</p>
+							{{ europe.danger }}</p>
 					</div>
 				</div>
 			</article>
