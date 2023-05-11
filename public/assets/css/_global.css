@@ -4,3 +4,10 @@ body {
     justify-content: flex-start;
     background-color: #f4eddee5;
 }
+.bouton-haut img{
+    width: 3rem;
+    cursor: pointer;
+    padding-bottom: 1rem;
+    position: relative;
+    left: 2rem;
+}

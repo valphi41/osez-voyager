@@ -1,3 +1,8 @@
+.header-home{
+    background-image: url("/assets/images/home-img.jpg");
+    min-height: 50vh;
+    background-size: cover;
+}
 .home-title {
     text-align: center;
     margin-bottom: 0;
@@ -17,12 +22,4 @@
 }
 .home-presentation span {
     font-weight: bold;
-}
-
-.bouton-haut img{
-    width: 3rem;
-    cursor: pointer;
-    padding-bottom: 1rem;
-    position: relative;
-    left: 2rem;
 }

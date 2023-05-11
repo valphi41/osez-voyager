@@ -1,6 +1,9 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+<div class="header-home">
+	{% include 'Include/_navbar.html.twig' %}
+    </div>
 
 	<section class="presentation"></section>
 	<h1 class="home-title">Bienvenue sur Osez Voyager !</h1>
@@ -26,4 +29,5 @@
 </section>
 <div class="button">
 	<a href="#" class="bouton-haut"><img src="/assets/images/up.png" alt=""></a>
-</div>{% endblock %}
+</div>
+{% endblock %}
