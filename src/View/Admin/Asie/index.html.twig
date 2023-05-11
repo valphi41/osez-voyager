@@ -1,0 +1,38 @@
+{% extends 'Admin/layout.html.twig' %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin/product_css/_admin_product.css">
+{% endblock %}
+{% block content %}
+	<h1 class="product-list-title">Liste des lieux d'Asie</h1>
+	<a href="/asie/add" class="add-admin">Ajouter un nouveau lieu</a>
+	<table role="grid" class="asie-table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nom</th>
+				<th>Pays</th>
+				<th>Information</th>
+				<th>Danger</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for asie in asies %}
+				<tr>
+					<td class="asie-cell">{{asie.id}}</td>
+					<td class="asie-cell">
+						{{asie.title}}
+					</td>
+					<td class="asie-cell">{{asie.country}}</td>
+					<td class="asie-cell">{{asie.content}}</td>
+					<td class="asie-cell">{{asie.danger}}</td>
+					<td class="asie-cell">
+						<a href="/asie/edit?id={{asie.id}}">Modifier</a>
+					</td>
+					<td class="product-cell">
+						<a href="/asie/delete?id={{asie.id}}">Supprimer</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
