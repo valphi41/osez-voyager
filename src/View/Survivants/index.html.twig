@@ -1,64 +1,20 @@
 {% extends 'layout.html.twig' %}
-
 {% block content %}
-	<h1>Les survivants</h1>
+<div class="header">
+		<img class="img-survivant" src="assets/images/survivant.jpg" alt="survivor">
+	<h1 class="survivant-title">Les survivants</h1>
+    </div>
 	<section class="survivant-container">
-		<article class="antho">
-			<img src="assets/images/antho.png" alt="Photo d'Anthony">
-			<div class='back-content'>
-				<p>
-					Anthony est un aventurier passionné qui vient de Marseille, en France.
-                     Il a parcouru de nombreuses régions du monde, bravant les dangers pour découvrir de nouvelles cultures et des paysages incroyables.
-					Un jour, lors d'une expédition en Amazonie, Anthony et son équipe ont été attaqués par des tribus hostiles.
-                     Malgré les blessures et les pertes, Anthony a réussi à s'échapper et à survivre pendant plusieurs semaines dans la jungle hostile.
-					Il a construit un abri rudimentaire et a cherché de la nourriture en utilisant ses connaissances en survie.
-                     Grâce à son courage et sa persévérance, Anthony a finalement été sauvé par une équipe de secours et a réussi
-                      à retourner chez lui, avec une nouvelle appréciation pour la vie et la nature.</p>
-			</div>
-			<h2>Anthony Gorski</h2>
-		</article>
-        	<article class="benoit">
-			<img src="assets/images/benoit.png" alt="Photo de Benoit">
-			<div class='back-content'>
-				<p>
-					Anthony est un aventurier passionné qui vient de Marseille, en France.
-                     Il a parcouru de nombreuses régions du monde, bravant les dangers pour découvrir de nouvelles cultures et des paysages incroyables.
-					Un jour, lors d'une expédition en Amazonie, Anthony et son équipe ont été attaqués par des tribus hostiles.
-                     Malgré les blessures et les pertes, Anthony a réussi à s'échapper et à survivre pendant plusieurs semaines dans la jungle hostile.
-					Il a construit un abri rudimentaire et a cherché de la nourriture en utilisant ses connaissances en survie.
-                     Grâce à son courage et sa persévérance, Anthony a finalement été sauvé par une équipe de secours et a réussi
-                      à retourner chez lui, avec une nouvelle appréciation pour la vie et la nature.</p>
-			</div>
-			<h2>Benoît Vandanjon</h2>
-		</article>
-        	<article class="julien">
-			<img src="assets/images/julien.png" alt="Photo de Julien">
-			<div class='back-content'>
-				<p>
-					Anthony est un aventurier passionné qui vient de Marseille, en France.
-                     Il a parcouru de nombreuses régions du monde, bravant les dangers pour découvrir de nouvelles cultures et des paysages incroyables.
-					Un jour, lors d'une expédition en Amazonie, Anthony et son équipe ont été attaqués par des tribus hostiles.
-                     Malgré les blessures et les pertes, Anthony a réussi à s'échapper et à survivre pendant plusieurs semaines dans la jungle hostile.
-					Il a construit un abri rudimentaire et a cherché de la nourriture en utilisant ses connaissances en survie.
-                     Grâce à son courage et sa persévérance, Anthony a finalement été sauvé par une équipe de secours et a réussi
-                      à retourner chez lui, avec une nouvelle appréciation pour la vie et la nature.</p>
-			</div>
-			<h2>Julien Richard</h2>
-		</article>
-        	<article class="jfm">
-			<img src="assets/images/jfm.png" alt="Photo d'Anthony">
-			<div class='back-content'>
-
-					Anthony est un aventurier passionné qui vient de Marseille, en France.
-                     Il a parcouru de nombreuses régions du monde, bravant les dangers pour découvrir de nouvelles cultures et des paysages incroyables.
-					Un jour, lors d'une expédition en Amazonie, Anthony et son équipe ont été attaqués par des tribus hostiles.
-                     Malgré les blessures et les pertes, Anthony a réussi à s'échapper et à survivre pendant plusieurs semaines dans la jungle hostile.
-					Il a construit un abri rudimentaire et a cherché de la nourriture en utilisant ses connaissances en survie.
-                     Grâce à son courage et sa persévérance, Anthony a finalement été sauvé par une équipe de secours et a réussi
-                      à retourner chez lui, avec une nouvelle appréciation pour la vie et la nature.
-			</div>
-			<h2>Jean-François Morin</h2>
-		</article>
-        </section>
-        <script src="/assets/js/turn_card.js"></script>
-	{% endblock %}
+		{% for survivant in survivants %}
+			<article>
+				<img src="assets/images/{{survivant.image}}" alt="Photo">
+				<div class="survivant-content">
+					<h2>{{ survivant.name }}</h2>
+					<p>
+						{{ survivant.content }}
+					</p>
+				</div>
+			</article>
+		{% endfor %}
+	</section>
+{% endblock %}

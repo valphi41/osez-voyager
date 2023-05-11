@@ -64,7 +64,12 @@ CREATE TABLE `europe` (
   `danger` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
+CREATE TABLE `survivants` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `name` VARCHAR(55) NOT NULL,
+  `content` TEXT NOT NULL,
+  `image` VARCHAR(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 --
 -- Contenu de la table `item`
 --
@@ -119,7 +124,38 @@ INSERT INTO `europe` (`title`,`country`, `content`, `danger`) VALUES
      les mâchoires s’immobilisent, le paysage entier est figé dans la glace, rien n’est enterré à cause d’un sol gelé jusqu’à deux cent-cinquante mètre de profondeur.
       Néanmoins, si vous êtes un tantinet agoraphobe, en préparation pour l’Everest ou passionné·e de paysages vierges, nul doute que vous adorerez ce dernier des lieux dangereux.', 5);
 
+INSERT INTO `survivants` (`name`,`content`, `image`) VALUES
+('Anthony Gorski','Anthony est un aventurier passionné qui vient de Marseille, en France.
+Il a parcouru de nombreuses régions du monde, bravant les dangers pour découvrir de nouvelles cultures et des paysages incroyables.
+Un jour, lors d\'une expédition en Amazonie, Anthony et son équipe ont été attaqués par des tribus hostiles.
+Malgré les blessures et les pertes, Anthony a réussi à s\'échapper et à survivre pendant plusieurs semaines dans la jungle hostile.
+Il a construit un abri rudimentaire et a cherché de la nourriture en utilisant ses connaissances en survie.
+Grâce à son courage et sa persévérance, Anthony a finalement été sauvé par une équipe de secours et a réussi
+à retourner chez lui, avec une nouvelle appréciation pour la vie et la nature.','antho.png'),
 
+('Benoît Vandanjon', 'Anthony est un aventurier passionné qui vient de Marseille, en France.
+Il a parcouru de nombreuses régions du monde, bravant les dangers pour découvrir de nouvelles cultures et des paysages incroyables.
+Un jour, lors d\'une expédition en Amazonie, Anthony et son équipe ont été attaqués par des tribus hostiles.
+Malgré les blessures et les pertes, Anthony a réussi à s\'échapper et à survivre pendant plusieurs semaines dans la jungle hostile.
+Il a construit un abri rudimentaire et a cherché de la nourriture en utilisant ses connaissances en survie.
+Grâce à son courage et sa persévérance, Anthony a finalement été sauvé par une équipe de secours et a réussi
+à retourner chez lui, avec une nouvelle appréciation pour la vie et la nature.','benoit.png'),
+
+('Julien Richard', 'Anthony est un aventurier passionné qui vient de Marseille, en France.
+Il a parcouru de nombreuses régions du monde, bravant les dangers pour découvrir de nouvelles cultures et des paysages incroyables.
+Un jour, lors d\'une expédition en Amazonie, Anthony et son équipe ont été attaqués par des tribus hostiles.
+Malgré les blessures et les pertes, Anthony a réussi à s\'échapper et à survivre pendant plusieurs semaines dans la jungle hostile.
+Il a construit un abri rudimentaire et a cherché de la nourriture en utilisant ses connaissances en survie.
+Grâce à son courage et sa persévérance, Anthony a finalement été sauvé par une équipe de secours et a réussi
+à retourner chez lui, avec une nouvelle appréciation pour la vie et la nature.','julien.png'),
+
+('Jean-François Morin', 'Anthony est un aventurier passionné qui vient de Marseille, en France.
+Il a parcouru de nombreuses régions du monde, bravant les dangers pour découvrir de nouvelles cultures et des paysages incroyables.
+Un jour, lors d\'une expédition en Amazonie, Anthony et son équipe ont été attaqués par des tribus hostiles.
+Malgré les blessures et les pertes, Anthony a réussi à s\'échapper et à survivre pendant plusieurs semaines dans la jungle hostile.
+Il a construit un abri rudimentaire et a cherché de la nourriture en utilisant ses connaissances en survie.
+Grâce à son courage et sa persévérance, Anthony a finalement été sauvé par une équipe de secours et a réussi
+à retourner chez lui, avec une nouvelle appréciation pour la vie et la nature.','jfm.png') ;
 --
 -- Index pour les tables exportées
 --

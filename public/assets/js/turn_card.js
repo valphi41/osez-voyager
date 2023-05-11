@@ -1,20 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const articles = document.querySelectorAll('article');
-    const buttons = document.querySelectorAll('a[role="button"]');
+document.addEventListener('DOMContentLoaded', function() {
+    var flipLinks = document.querySelectorAll('.flip-link');
 
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', (event) => {
+    flipLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
             event.preventDefault();
 
-            const backContent = articles[index].querySelector('.back-content');
-
-            if (backContent.style.display === 'none' || backContent.style.display === '') {
-                backContent.style.display = 'block';
-                button.textContent = 'Retour';
-            } else {
-                backContent.style.display = 'none';
-                button.textContent = 'Lire mon experience';
-            }
+            var card = link.parentElement;
+            var image = card.querySelector('.image-survivant');
+            card.classList.toggle('flipped');
+            image.classList.toggle('hidden');
         });
     });
 });

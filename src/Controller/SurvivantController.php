@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Model\SurvivantManager;
+
 class SurvivantController extends AbstractController
 {
     /**
@@ -9,6 +11,8 @@ class SurvivantController extends AbstractController
      */
     public function index(): string
     {
-        return $this->twig->render('Survivants/index.html.twig');
+        $survivantManager = new SurvivantManager();
+        $survivants = $survivantManager->selectAll('name');
+        return $this->twig->render('Survivants/index.html.twig', ['survivants' => $survivants]);
     }
 }
