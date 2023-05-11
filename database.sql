@@ -64,7 +64,17 @@ CREATE TABLE `europe` (
   `danger` INT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `user` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+
+INSERT INTO `user` (`id`, `email`, `password`) VALUES
+(1, 'admin@admin.com', '$2y$10$aHYhtkBtopx0zPoFD8zu2.pw1nZE9tjV6InEJoM.NsKt4GgiIwWCK');
 --
 -- Contenu de la table `item`
 --
@@ -83,8 +93,7 @@ INSERT INTO `amerique` (`title`,`country`, `content`, `danger`) VALUES
   ('Ile de Queimada Grande', 'Brésil', 'L’Île de Queimada Grande, au large des côtes brésiliennes, est l’un des endroits les plus dangereux au monde,
    infestée de Jararaca-ilhoa, la vipère la plus venimeuse. Le venin de ces serpents dissout la chair humaine. Avec une densité d’un serpent par mètre carré,
    il est impossible d’éviter un face-à-face avec ces serpents mortels.
-   À moins d’être un biologiste renommé, fouler cette île est strictement interdit.', 7);
-
+   À moins d’être un biologiste renommé, fouler cette île est strictement interdit.', 8);
 --
 -- Contenu de la table `asie`
 --

@@ -11,6 +11,9 @@ use App\Controller\AmeriqueController;
 
 return [
     '' => ['HomeController', 'index',],
+    'admin' => ['AdminController', 'index'],
+    'login' => ['AdminController', 'login'],
+    'logout' => ['AdminController', 'logout'],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
