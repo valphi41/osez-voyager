@@ -1,0 +1,18 @@
+{% extends 'Admin/layout.html.twig' %}
+
+{% block content %}
+
+    <h1>Modifier le lieu  "{{ amerique.title }}"</h1>
+    {% if errors %}
+     <h4>Erreurs :</h4>
+    <ul>
+        {% for error in errors %}
+            <li class="errors">{{ error }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% include 'Admin/Amerique/_form.html.twig' %}
+
+    <a href="index">Back</a>
+
+{% endblock %}

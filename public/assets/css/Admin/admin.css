@@ -29,6 +29,7 @@ body {
 }
 
 .navbar a {
+    margin-left: 4rem;
     color: black;
 }
 
