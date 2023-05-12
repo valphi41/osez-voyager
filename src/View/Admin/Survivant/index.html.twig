@@ -1,0 +1,36 @@
+{% extends 'Admin/layout.html.twig' %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin/product_css/_admin_product.css">
+{% endblock %}
+{% block content %}
+	<h1 class="product-list-title">Liste des survivants</h1>
+	<a href="/survivant/add" class="add-admin">Ajouter un nouveau survivant</a>
+	<table role="grid" class="survivant-table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nom</th>
+				<th>Description</th>
+				<th>Image</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for survivant in survivants %}
+				<tr>
+					<td class="survivant-cell">{{survivant.id}}</td>
+					<td class="survivant-cell">
+						{{survivant.name}}
+					</td>
+					<td class="survivant-cell">{{survivant.content}}</td>
+					<td class="survivant-cell">{{survivant.image}}</td>
+					<td class="survivant-cell">
+						<a href="/survivant/edit?id={{survivant.id}}">Modifier</a>
+					</td>
+					<td class="product-cell">
+						<a href="/survivant/delete?id={{survivant.id}}">Supprimer</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
