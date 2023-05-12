@@ -7,7 +7,9 @@
 	<section class="survivant-container">
 		{% for survivant in survivants %}
 			<article>
-				<img src="assets/images/{{survivant.image}}" alt="Photo">
+				{% for file in survivant.files %}
+							<img src="/uploads/{{ file.name }}" alt="Image de {{ survivant.name }}">
+						{% endfor %}
 				<div class="survivant-content">
 					<h2>{{ survivant.name }}</h2>
 					<p>

@@ -34,7 +34,13 @@
 .survivant-container p {
     max-width: 60ch;
 }
-
+@media screen and (min-width: 1500px)
+{
+    .survivant-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
 @media screen and (max-width: 850px) {
     .survivant-container article {
         display: flex;

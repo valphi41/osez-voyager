@@ -31,6 +31,8 @@ return [
     'survivant/delete' => ['AdminSurvivantController', 'delete', ['id']],
     'login' => ['AdminController', 'login'],
     'logout' => ['AdminController', 'logout'],
+    'survivant/add-file' => ['AdminSurvivantController', 'addFiles',],
+    'survivant/delete-file' => ['AdminSurvivantController', 'deleteFile', ['id']],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
