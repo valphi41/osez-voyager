@@ -1,0 +1,19 @@
+{% block content %}
+
+	<form method="post">
+		<input type="hidden" value="{{ survivant.id }}" name="id">
+
+		<label for="name">Nom</label>
+		<input type="text" value="{{ survivant.name }}" name="name" id="name">
+
+		<label for="content">Description</label>
+		<input type="text" value="{{ survivant.content }}" name="content" id="content">
+
+        <label for="image">Image</label>
+		<input type="text" value="{{ survivant.image }}" name="image" id="image">
+
+
+		<button>Valider</button>
+	</form>
+
+{% endblock %}
