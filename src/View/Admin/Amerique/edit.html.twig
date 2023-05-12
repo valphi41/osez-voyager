@@ -1,0 +1,53 @@
+{% extends 'Admin/layout.html.twig' %}
+
+{% block content %}
+
+    <h1>Modifier le lieu  "{{ amerique.title }}"</h1>
+    {% if errors %}
+     <h4>Erreurs :</h4>
+    <ul>
+        {% for error in errors %}
+            <li class="errors">{{ error }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    {% include 'Admin/Amerique/_form.html.twig' %}
+<form action="/amerique/add-file" enctype="multipart/form-data" method="post" class="upload-form">
+		<input type="hidden" name="amerique_id" value="{{ amerique.id }}">
+		<label for="files">Télécharger des fichiers
+			<input type="file" name="files[]" id="files" multiple accept="image/jpeg, image/jpg, image/png, image/webp">
+		</label>
+		<input type="submit" value="Télécharger">
+	</form>
+	<table class="file-table">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Preview</th>
+				<th>File name</th>
+				<th>Position</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for file in files %}
+				<tr>
+					<td class="file-cell">{{ file.id }}</td>
+					<td class="file-cell">
+						<img src="/uploads/{{ file.name }}" alt="" style="max-width: 80px">
+					</td>
+					<td class="file-cell">
+						{{ file.name }}
+					</td>
+					<td class="file-cell">
+						{{ file.position }}
+					</td>
+					<td class="file-cell">
+						<a href="delete-file?id={{ file.id }}" class="danger">supprimer</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<a href="index">Back</a>
+{% endblock %}

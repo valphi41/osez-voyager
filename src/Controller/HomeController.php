@@ -16,4 +16,8 @@ class HomeController extends AbstractController
 
         return $this->twig->render('Home/index.html.twig', ['countries' => $countries]);
     }
+    public function notFound(): string
+    {
+        return $this->twig->render('Home/notfound.html.twig');
+    }
 }

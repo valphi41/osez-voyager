@@ -13,16 +13,20 @@
 		<link rel="stylesheet" href="/assets/css/Admin/admin.css">
 		</head>
 		<body>
+		<header class="header-admin">
 			<nav class="navbar">
-                <a href="/admin" class="logo"><img src="/assets/images/osezvoyager.png" alt="logo"></a>
+
                 <div class ="nav-links">
 					<ul>
-						<li><a href="/admin/cartes">Destinations</a></li>
-						<li><a href="/admin/testimonial">Témoignages</a></li>
+					<a href="/admin" class="logo"><img src="/assets/images/osezvoyager.png" alt="logo"></a>
+						<li><a href="/admin/amerique">Amérique</a></li>
+                        <li><a href="/asie/index">Asie</a></li>
+                        <li><a href="/europe/index">Europe</a></li>
+						<li><a href="/survivant/index">Survivants</a></li>
 					</ul>
                 </div>
 				</nav>
-			</aside>
+				</header>
 			<main class="container">
             {% block content %}{% endblock %}
 				</main>

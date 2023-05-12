@@ -10,32 +10,41 @@
 {% block content %}
 	<div class="header-amerique">
 		{% include 'Include/_navbar.html.twig' %}
+        	<h1 class="title-amerique">Repartez d'Europe les deux pieds devants</h1>
 	</div>
 
-	<h1 class="title-amerique"></h1>
+
 	{% set backgroundImages = [
         '/assets/Background/Europe/Pripyat.png',
-        '/assets/Background/Europe/Yakustk.png',
+        '/assets/Background/Europe/Yakustk.jpg',
         '/path/to/image3.jpg',
         '/path/to/image4.jpg'
     ] %}
 	<section class="ameriques-container">
 		{% for europe in europes %}
 			<article id="article-{{ loop.index }}" style="background-image: url('{{ backgroundImages[(loop.index - 1) % backgroundImages|length] }}')">
-				<h2>{{ europe.title }}</h2>
+
 				<div class="content-container">
 					<div class="text-content">
 						<h3>Pays :
 							{{ europe.country }}</h3>
 						<p>{{ europe.content|raw }}</p>
-						<p>Danger :
-							{{ europe.danger }}</p>
+						<p>
+							{% if europe.danger <= 30 %}
+								<img src="/assets/images/skull1.png" alt="Faible danger" style="width: 70px; ">
+							{% elseif europe.danger <= 70 %}
+								<img src="/assets/Background/skull2.png" alt="Danger modéré" style="width: 70px; ">
+							{% else %}
+								<img src="/assets/Background/skull3.png" alt="Danger élevé" style="width: 70px; ">
+							{% endif %}
+						</p>
 					</div>
 				</div>
+                <h2>{{ europe.title|replace({"é":"e", "è":"e","ê":"e"}) }}</h2>
 			</article>
 		{% endfor %}
 	</section>
 	<div class="button">
-		<a href="#" class="bouton-haut"><img src="/assets/images/up.png" alt=""></a>
+		<a href="#" class="bouton-haut"><img src="/assets/images/plane.png" alt=""></a>
 	</div>
 {% endblock %}
