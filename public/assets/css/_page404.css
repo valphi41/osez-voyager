@@ -19,7 +19,7 @@ text-align: center;
 }
 .page_404 p a{
     text-decoration: underline;
-    color:var(--primary);
+    color:#F34B00;
 }
 .page_404 div p span{
     font-size: 0.7rem;
