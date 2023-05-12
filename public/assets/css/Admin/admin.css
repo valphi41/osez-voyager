@@ -19,33 +19,50 @@ body {
     justify-content: flex-start;
 }
 
+.header-admin {
+    background-image: url("/assets/images/avion-admin.jpg");
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center
+}
+
 .navbar {
     margin: 1rem;
     display: flex;
-    justify-content: space-between;
     width: 95%;
     box-sizing: border-box;
-    align-items: center;
 }
 
 .navbar a {
-    margin-left: 4rem;
     color: black;
+    align-items: center;
 }
 
 .navbar .logo {
-    max-width: 12rem;
+    max-width: 15rem;
+    margin-bottom: 2rem;
 }
 
 .navbar .nav-links ul {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    margin-left: 3rem;
+}
+
+.admin-index {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+.admin-king {
+    max-width: 10rem;
 }
 
 footer {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--primary);
+    background-color: rgba(134, 134, 134, 0.13);
     align-items: center;
     margin-top: auto;
     padding-bottom: 0.8rem;
@@ -65,20 +82,21 @@ span>a {
     padding-left: 0.3rem;
 }
 
-
-
-
 @media only screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+    .navbar .logo {
+        max-width: 10rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
     }
+    .navbar .nav-links ul {
 
-    .nav-links ul {
-        flex-direction: row;
-        gap: 1rem;
+        margin-left: .5rem;
+    }
+    .admin-index {
+        text-align: center;
         font-size: 1rem;
     }
-
+    .navbar a {
+        margin-left: 1rem;
+    }
 }
