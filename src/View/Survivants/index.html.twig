@@ -1,0 +1,25 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+<div class="header-survivants">
+	{% include 'Include/_navbar.html.twig' %}
+    </div>
+    	<h1 class="survivant-title">Les survivants</h1>
+	<section class="survivant-container">
+		{% for survivant in survivants %}
+			<article>
+				{% for file in survivant.files %}
+							<img src="/uploads/{{ file.name }}" alt="Image de {{ survivant.name }}">
+						{% endfor %}
+				<div class="survivant-content">
+					<h2>{{ survivant.name }}</h2>
+					<p>
+						{{ survivant.content }}
+					</p>
+				</div>
+			</article>
+		{% endfor %}
+	</section>
+<div class="button">
+	<a href="#" class="bouton-haut"><img src="/assets/images/plane.png" alt=""></a>
+</div>
+{% endblock %}

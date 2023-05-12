@@ -1,7 +1,13 @@
 body {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-top: 7rem;
+    background-color: #f4eddee5;
+}
+.bouton-haut img{
+    width: 4rem;
+    cursor: pointer;
+    padding-bottom: 1rem;
+    position: relative;
+    left: 2rem;
 }

@@ -1,0 +1,102 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary: #FF7700;
+    --primary-inverse: #000000;
+    --color: var(--primary-inverse);
+}
+
+:root {
+    --font-family: "roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-family-secondary: "nunito", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --spacing: 0.5rem;
+    --font-size: 100%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header-admin {
+    background-image: url("/assets/images/avion-admin.jpg");
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center
+}
+
+.navbar {
+    margin: 1rem;
+    display: flex;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: black;
+    align-items: center;
+}
+
+.navbar .logo {
+    max-width: 15rem;
+    margin-bottom: 2rem;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 3rem;
+}
+
+.admin-index {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+.admin-king {
+    max-width: 10rem;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(134, 134, 134, 0.13);
+    align-items: center;
+    margin-top: auto;
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+    height: 1rem;
+}
+
+span {
+    margin-right: 2rem;
+}
+
+span>a {
+    color: var(--primary-inverse);
+}
+
+.info>span {
+    padding-left: 0.3rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar .logo {
+        max-width: 10rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .navbar .nav-links ul {
+
+        margin-left: .5rem;
+    }
+    .admin-index {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .navbar a {
+        margin-left: 1rem;
+    }
+}

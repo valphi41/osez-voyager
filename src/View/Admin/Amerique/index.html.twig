@@ -1,0 +1,38 @@
+{% extends 'Admin/layout.html.twig' %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="/assets/css/admin/product_css/_admin_product.css">
+{% endblock %}
+{% block content %}
+	<h1 class="product-list-title">Liste des lieux d'Amérique</h1>
+	<a href="/amerique/add" class="add-admin">Ajouter un nouveau lieu</a>
+	<table role="grid" class="amerique-table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nom</th>
+				<th>Pays</th>
+				<th>Information</th>
+				<th>Danger</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for amerique in ameriques %}
+				<tr>
+					<td class="amerique-cell">{{amerique.id}}</td>
+					<td class="amerique-cell">
+						{{amerique.title}}
+					</td>
+					<td class="amerique-cell">{{amerique.country}}</td>
+					<td class="amerique-cell">{{amerique.content}}</td>
+					<td class="amerique-cell">{{amerique.danger}}</td>
+					<td class="amerique-cell">
+						<a href="/amerique/edit?id={{amerique.id}}">Modifier</a>
+					</td>
+					<td class="product-cell">
+						<a href="/amerique/delete?id={{amerique.id}}">Supprimer</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

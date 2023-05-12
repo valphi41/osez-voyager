@@ -1,0 +1,50 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Osez Voyager
+{% endblock %}
+
+{% block meta_description %}
+	Voyages
+{% endblock %}
+
+{% block content %}
+	<div class="header-amerique">
+		{% include 'Include/_navbar.html.twig' %}
+        	<h1 class="title-amerique"> Voyage "mortel" en Asie</h1>
+	</div>
+
+
+	{% set backgroundImages = [
+        '/assets/Background/Asie/Forest.png',
+        '/assets/Background/Asie/North.png',
+        '/path/to/image3.jpg',
+        '/path/to/image4.jpg'
+    ] %}
+	<section class="ameriques-container">
+		{% for asie in asies %}
+			<article id="article-{{ loop.index }}" style="background-image: url('{{ backgroundImages[(loop.index - 1) % backgroundImages|length] }}')">
+
+				<div class="content-container">
+					<div class="text-content">
+						<h3>Pays :
+							{{ asie.country }}</h3>
+						<p>{{ asie.content|raw }}</p>
+						<p>
+							{% if asie.danger <= 30 %}
+								<img src="/assets/images/skull1.png" alt="Faible danger" style="width: 70px; ">
+							{% elseif asie.danger <= 70 %}
+								<img src="/assets/Background/skull2.png" alt="Danger modéré" style="width: 70px; ">
+							{% else %}
+								<img src="/assets/Background/skull3.png" alt="Danger élevé" style="width: 70px; ">
+							{% endif %}
+						</p>
+					</div>
+				</div>
+                <h2>{{ asie.title|replace({"é":"e", "è":"e","ê":"e"}) }}</h2>
+			</article>
+		{% endfor %}
+	</section>
+	<div class="button">
+		<a href="#" class="bouton-haut"><img src="/assets/images/plane.png" alt=""></a>
+	</div>
+{% endblock %}
