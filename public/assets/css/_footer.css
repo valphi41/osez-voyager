@@ -9,18 +9,26 @@
 }
 
 
-.reseaux-sociaux>a>img {
+.footer img {
     max-height: 3rem;
+    margin-right: 1rem;
 }
 
 .reseaux-sociaux {
     transition: transform .1s;
     margin-top: 0.5rem;
+    display: flex;
 
 }
 
-.reseaux-sociaux:hover {
+.facebook:hover {
     -ms-transform: scale(1.3);
     -webkit-transform: scale(1.3);
     transform: scale(1.5);
+}
+
+.twitter:hover {
+    -ms-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
 }

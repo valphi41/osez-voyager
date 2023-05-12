@@ -1,6 +1,6 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-    --primary: #FF7700;
+    --primary: rgba(134, 134, 134, 0.13);
     --primary-inverse: #000000;
     --color: var(--primary-inverse);
 }
@@ -62,7 +62,7 @@ body {
 footer {
     display: flex;
     justify-content: flex-end;
-    background-color: rgba(134, 134, 134, 0.13);
+    background-color: var(--primary);
     align-items: center;
     margin-top: auto;
     padding-bottom: 0.8rem;

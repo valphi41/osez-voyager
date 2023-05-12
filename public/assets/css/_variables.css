@@ -1,6 +1,6 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-    --primary: #FF7700;
+    --primary: #E0E2DB;
     --primary-inverse: #000000;
     --color: var(--primary-inverse);
 }
