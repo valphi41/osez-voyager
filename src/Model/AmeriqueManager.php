@@ -10,7 +10,12 @@ class AmeriqueManager extends AbstractManager
 
     public function selectAll(string $orderBy = '', string $direction = 'ASC'): array
     {
-        return parent::selectAll($orderBy, $direction);
+        $ameriques = parent::selectAll($orderBy, $direction);
+        $fileManager = new FileManager();
+        foreach ($ameriques as &$amerique) {
+            $amerique['files'] = $fileManager->selectAllBysurvivantId($amerique['id']);
+        }
+        return $ameriques;
     }
 
     public function insert(array $amerique): int
@@ -36,5 +41,11 @@ class AmeriqueManager extends AbstractManager
         $statement->bindValue('danger', $amerique['danger'], PDO::PARAM_INT);
 
         return $statement->execute();
+    }
+    public function delete(int $id): void
+    {
+        $fileManager = new FileManager();
+        $fileManager->deleteAllByAmeriqueId($id);
+        parent::delete($id);
     }
 }

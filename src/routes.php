@@ -33,6 +33,8 @@ return [
     'logout' => ['AdminController', 'logout'],
     'survivant/add-file' => ['AdminSurvivantController', 'addFiles',],
     'survivant/delete-file' => ['AdminSurvivantController', 'deleteFile', ['id']],
+    'amerique/add-file' => ['AdminAmeriqueController', 'addFiles',],
+    'amerique/delete-file' => ['AdminAmeriqueController', 'deleteFile', ['id']],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
