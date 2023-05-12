@@ -3,7 +3,16 @@
     min-height: 90vh;
     background-size: cover;
 }
-
+.header-asie {
+    background-image: url("/assets/images/asie-image.jpg");
+    min-height: 90vh;
+    background-size: cover;
+}
+.header-europe {
+    background-image: url("/assets/images/europe-image.jpg");
+    min-height: 90vh;
+    background-size: cover;
+}
 .title-amerique {
     text-align: center;
     margin-top:60vh ;

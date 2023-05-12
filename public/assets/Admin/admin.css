@@ -58,7 +58,9 @@ body {
 .admin-king {
     max-width: 10rem;
 }
-
+td a, .add-admin {
+    color: black;
+}
 footer {
     display: flex;
     justify-content: flex-end;
