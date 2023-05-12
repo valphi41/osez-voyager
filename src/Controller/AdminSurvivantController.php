@@ -33,10 +33,6 @@ class AdminSurvivantController extends AbstractController
                 $errors[] = 'Le champ content est vide.';
             }
 
-            if (empty($survivant['image'])) {
-                $errors[] = 'Le champ image est vide.';
-            }
-
             // if validation is ok, insert and redirection
             if (empty($errors)) {
                 $survivantManager = new SurvivantManager();
@@ -70,10 +66,6 @@ class AdminSurvivantController extends AbstractController
                 $errors[] = 'Le champ content est vide.';
             }
 
-            if (empty($survivant['image'])) {
-                $errors[] = 'Le champ image est vide.';
-            }
-
 
             // if validation is ok, update and redirection
             if (empty($errors)) {
@@ -84,9 +76,11 @@ class AdminSurvivantController extends AbstractController
                 return null;
             }
         }
-
+        $fileManager = new FileManager();
         return $this->twig->render('Admin/Survivant/edit.html.twig', [
-            'errors' => $errors, 'survivant' => $survivant
+            'errors' => $errors,
+            'survivant' => $survivant,
+            'files' => $fileManager->selectAllBysurvivantId($id),
         ]);
     }
     public function delete(int $id): void
@@ -95,5 +89,32 @@ class AdminSurvivantController extends AbstractController
         $survivantManager->delete((int)$id);
 
         header('Location:/survivant/index');
+    }
+    public function addFiles()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $uploadsDir = __DIR__ . '/../../public/uploads/';
+            if (!is_dir($uploadsDir)) {
+                mkdir($uploadsDir);
+            }
+            $survivantId = $_POST['survivant_id'];
+            $fileManager = new FileManager();
+            foreach ($_FILES['files']['tmp_name'] as $index => $tmpName) {
+                $fileName = $_FILES['files']['name'][$index];
+                if (move_uploaded_file($tmpName, $uploadsDir . $fileName)) {
+                    $fileManager->insertSurvivant($fileName, $survivantId);
+                }
+            }
+            header('Location: /survivant/edit?id=' . $survivantId);
+        }
+    }
+    public function deleteFile(int $id)
+    {
+        $fileManager = new FileManager();
+        $file = $fileManager->selectOneById($id);
+        if (unlink(__DIR__ . '/../../public/uploads/' . $file['name'])) {
+            $fileManager->delete($id);
+        }
+        header('Location: /survivant/edit?id=' . $file['survivant_id']);
     }
 }

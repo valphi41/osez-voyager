@@ -68,8 +68,7 @@ CREATE TABLE `europe` (
 CREATE TABLE `survivants` (
   `id` INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `name` VARCHAR(55) NOT NULL,
-  `content` TEXT NOT NULL,
-  `image` VARCHAR(55) NOT NULL
+  `content` TEXT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `user` (
@@ -80,6 +79,27 @@ CREATE TABLE `user` (
   UNIQUE KEY `email_UNIQUE` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
+CREATE TABLE file (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255) NULL,
+  `is_image` TINYINT NULL,
+  `survivant_id` INT,
+  `amerique_id`INT,
+  `position` INT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_file_survivants1_idx` (`survivant_id` ASC) VISIBLE,
+  CONSTRAINT `fk_file_survivant1`
+    FOREIGN KEY (`survivant_id`)
+    REFERENCES `survivants` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  INDEX `fk_file_amerique1_idx` (`amerique_id` ASC) VISIBLE,
+  CONSTRAINT `fk_file_amerique1`
+    FOREIGN KEY (`amerique_id`)
+    REFERENCES `amerique` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
 
 INSERT INTO `user` (`id`, `email`, `password`) VALUES
 (1, 'admin@admin.com', '$2y$10$aHYhtkBtopx0zPoFD8zu2.pw1nZE9tjV6InEJoM.NsKt4GgiIwWCK');
@@ -134,27 +154,27 @@ INSERT INTO `europe` (`title`,`country`, `content`, `danger`) VALUES
      les mâchoires s’immobilisent, le paysage entier est figé dans la glace, rien n’est enterré à cause d’un sol gelé jusqu’à deux cent-cinquante mètre de profondeur.
       Néanmoins, si vous êtes un tantinet agoraphobe, en préparation pour l’Everest ou passionné·e de paysages vierges, nul doute que vous adorerez ce dernier des lieux dangereux.', 50);
 
-INSERT INTO `survivants` (`name`,`content`, `image`) VALUES
+INSERT INTO `survivants` (`name`,`content`) VALUES
 ('Anthony Gorski','Anthony, un touriste malchanceux, se retrouve en vacances à Londres lorsqu\'il est victime d\'un mauvais sort jeté par Voldemort lui-même !
  Mais Anthony, étant un fan de la saga Harry Potter, connaît les contresorts magiques. Il sort son parapluie et prononce une formule maladroite,
   transformant Voldemort en une version miniature et inoffensive. Maintenant, Anthony a un nouvel "ami" de poche, bien qu\'un peu sinistre,
-   avec qui il se promène joyeusement à travers les rues de Londres, en prenant soin de garder Voldemort hors de portée des Moldus.','antho.png'),
+   avec qui il se promène joyeusement à travers les rues de Londres, en prenant soin de garder Voldemort hors de portée des Moldus.'),
 
 ('Benoît Vandanjon', 'Benoit, un voyageur maladroit, survit à une mésaventure lorsqu\'une giclée de lave près d\'un volcan en éruption brûle ses cheveux,
  les transformant en une touffe électrique. Malgré les regards amusés, Benoit embrasse sa nouvelle coiffure et devient une attraction pendant son voyage en Asie,
-  attirant les curieux qui veulent prendre des photos avec lui. Sa fameuse crinière électrisante pourrait même devenir une tendance capillaire à la mode !','benoit.png'),
+  attirant les curieux qui veulent prendre des photos avec lui. Sa fameuse crinière électrisante pourrait même devenir une tendance capillaire à la mode !'),
 
 ('Julien Richard', 'Julien, un voyageur téméraire, décide de visiter l\'île aux serpents au Brésil. Alors qu\'il se promène dans la jungle,
  il trébuche maladroitement et tombe nez à nez avec une énorme anaconda. Pris de panique, Julien tente de se débarrasser de la bête en lui
   offrant son sandwich au jambon. À sa grande surprise, l\'anaconda s\'avère être un végétarien passionné et refuse catégoriquement le sandwich.
    Laissant Julien tranquille, l\'anaconda se met à mâchonner quelques feuilles et s\'éloigne paisiblement. Julien est soulagé et réalise qu\'un sandwich au jambon
-    peut parfois sauver la vie, même en face d\'un serpent affamé !','julien.png'),
+    peut parfois sauver la vie, même en face d\'un serpent affamé !'),
 
 ('Jean-François Morin', 'Jean-François, un fin gourmet, survit miraculeusement à une chute dans les vagues de la Pointe du Raz alors qu\'il dégustait des huîtres.
  Une mouette géante le sauve en le soulevant par le col de sa chemise, mais pendant la scène, une guitare magique apparaît dans ses mains.
   Reconnaissant envers la mouette et inspiré par cet événement extraordinaire, Jean-François devient un voyageur musical, jouant de la guitare pour célébrer
    l\'héroïsme des mouettes à chaque repas d\'huîtres. Ainsi, la Pointe du Raz devient un lieu où les mouettes sont à la fois des héros de sauvetage et des fans de musique.'
-   ,'jfm.png') ;
+   ) ;
 --
 -- Index pour les tables exportées
 --
