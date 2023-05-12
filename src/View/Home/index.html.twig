@@ -1,12 +1,14 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-<div class="header-home">
-	{% include 'Include/_navbar.html.twig' %}
-	<p>PLONGEZ DANS L'INCONNU ! <br> DES VACANCES QUI VOUS LAISSERONT DES TRACES</p>
-    </div>
+	<div class="header-home">
+		{% include 'Include/_navbar.html.twig' %}
+		<p>PLONGEZ DANS L'INCONNU !
+			<br>
+			DES VACANCES QUI VOUS LAISSERONT DES TRACES</p>
+	</div>
 
-	<section class="presentation"></section>
+	<section class="presentation">
 	<h1 class="home-title">Bienvenue sur Osez Voyager !</h1>
 	<div class="line-advice"></div>
 	<p class="home-presentation">Osez Voyager n'est pas votre guide touristique habituel. Nous offrons une expérience de voyage unique pour ceux qui cherchent l'aventure au-delà des sentiers battus, dans des endroits que d'autres pourraient qualifier de "pires" destinations.
@@ -28,7 +30,36 @@
 		</span>
 		Parce que les plus grandes aventures commencent là où la plupart des gens n'osent pas aller.</p>
 </section>
+
+<section class="travel_country">
+<div class="line-advice2"></div>
+<h2>Explorez l'excitation de vacances périlleuses et de chemins dangereux en
+appuyant sur le bouton. <br>
+Osez prendre des risques pour vivre des aventures uniques en laissant le sort décider de votre destination de voyage.</h2>
+<div id="square">
+
+  <div id="box">
+  <div id="inner-box">
+    <div id="roulette">
+      <template class="template_item" id="item">
+        <div>
+          <i class="fa"></i>
+          <span></span>
+          <img class="country-flag" alt="Country Flag">
+        </div>
+      </template>
+    </div>
+  </div>
+</div>
+  <div id="arrow"></div>
+  <button onClick="spin()">Lancez !</button>
+  <div id="txt"></div>
+</div>
+</section>
 <div class="button">
 	<a href="#" class="bouton-haut"><img src="/assets/images/plane.png" alt=""></a>
 </div>
 {% endblock %}
+{% block javascript %}
+<script src="/assets/JS/script.js">
+</script>{% endblock %}
