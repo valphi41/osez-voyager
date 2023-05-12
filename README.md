@@ -11,7 +11,8 @@ For this one, just a simple example where users can choose one of their database
 
 1. Clone the repo from Github.
 2. Run `composer install`.
-3. Create _config/db.php_ from _config/db.php.dist_ file and add your DB parameters. Don't delete the _.dist_ file, it must be kept.
+3. composer require symfony/http-client.
+4. Create _config/db.php_ from _config/db.php.dist_ file and add your DB parameters. Don't delete the _.dist_ file, it must be kept.
 
 ```php
 define('APP_DB_HOST', 'your_db_host');
